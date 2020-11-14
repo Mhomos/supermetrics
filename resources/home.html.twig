@@ -1,0 +1,49 @@
+<html>
+<style>
+    li {
+        font-family: Courier, monospace;
+        margin-bottom: 20px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #e40814;
+    }
+
+    a > small {
+        text-decoration: underline;
+    }
+
+    div {
+        margin: 20px auto;
+        width: 50%;
+        border: 3px solid #d4d4d4;
+        padding: 10px;
+    }
+
+    img {
+        text-align: center;
+        width: 100%;
+    }
+</style>
+<body>
+<div>
+    <img src='./images/supermetics-logo.jpg'>
+    <ul>
+        {% for report in reports %}
+            <li><a href='metric/{{ report.key }}'><small>[click to show]</small> {{ report.description }}</a></li>
+        {% endfor %}
+
+        <li><p>By Mohamed Hassan.</p></li>
+    </ul>
+
+</div>
+
+
+</body>
+</html>
